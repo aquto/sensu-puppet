@@ -41,10 +41,6 @@ Puppet::Type.newtype(:sensu_handler) do
     desc "Pipe information used by the transport type"
   end
 
-  newproperty(:pipe_options) do
-    desc "Pipe options used by the transport type"
-  end
-
   newproperty(:socket) do
     desc "Socket information used by the udp type"
 

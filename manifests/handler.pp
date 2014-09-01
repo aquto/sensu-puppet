@@ -37,11 +37,6 @@
 #   Keys: name, type, options 
 #   Default: undef
 #
-# [*pipe_options*]
-#   Hash.  Pipe options used when type=transport
-#   Keys: durable, passive 
-#   Default: undef
-#
 # [*socket*]
 #   Hash.  Socket information when type=tcp or type=udp
 #   Keys: host, port
@@ -72,7 +67,6 @@ define sensu::handler(
   $severities   = ['ok', 'warning', 'critical', 'unknown'],
   $exchange     = undef,
   $pipe         = undef,
-  $pipe_options = undef,
   $mutator      = undef,
   $socket       = undef,
   $filters      = undef,
@@ -152,7 +146,6 @@ define sensu::handler(
     severities   => $severities,
     exchange     => $exchange,
     pipe         => $pipe,
-    pipe_options => $pipe_options,
     socket       => $socket,
     mutator      => $mutator,
     filters      => $filters,
